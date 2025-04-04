@@ -87,9 +87,8 @@ DATABASES = {
         'USER': os.environ['PS_U'],
         'PASSWORD': os.environ['DB_PW'],
         'HOST': 'db',
-        'PORT': os.environ['DB_PORT'],
-    }
-}
+        'PORT': os.environ['DB_PORT']}
+        }
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
 

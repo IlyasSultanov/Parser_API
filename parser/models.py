@@ -21,6 +21,17 @@ class LegalCategory(MPTTModel):
     class MPTTMeta:
         order_insertion_by = ['name']
 
+class BaseParsingResult(models.Model):
+    """ Parsing result details"""
+    task_id = models.ForeignKey(
+        LegalCategory,
+        blank=True,
+        null=True,
+        on_delete=models.PROTECT
+    )
+    data = models.TextField(blank=True)
+    task_type = models.CharField(blank=True, max_length=64)
+
 
 class Document(models.Model):
     eoNUMBER = models.CharField(max_length=100, verbose_name='Номер ЕО')
